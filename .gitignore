@@ -1,7 +1,12 @@
-*/
+/Library
+/Logs
+/ProjectSetings
+/QCAR
+/Temp
+/UserSettings
 
-!/Assets/*
-!/Packages/*
+!/Assets
+!/Packages
 
 !.gitatributes
 !.gitignore
