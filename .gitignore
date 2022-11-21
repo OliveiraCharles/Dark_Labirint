@@ -1,6 +1,6 @@
-*/
-*.*
-!Assets/
-!Packages/
+*\
+Library\*
+!Assets\*
+!Packages\
 !.gitatributes
 !.gitignore
