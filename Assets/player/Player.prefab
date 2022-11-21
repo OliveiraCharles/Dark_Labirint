@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9083282647230264582}
   - component: {fileID: 5614188266946974100}
-  - component: {fileID: 1274836030761279906}
+  - component: {fileID: 3732990279304823583}
+  - component: {fileID: 7788620141506372736}
+  - component: {fileID: 7175427294796338576}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -52,7 +54,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1274836030761279906
+--- !u!65 &3732990279304823583
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871348577238770416}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.25, z: 0}
+--- !u!114 &7788620141506372736
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61,13 +76,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 871348577238770416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15b7b418cfd03834c86ff9790ee1d5f3, type: 3}
+  m_Script: {fileID: 11500000, guid: a1c07ec9f55f78f408693ca55f5e60d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: {fileID: 0}
+  Life: []
+  jumpForce: 12
+  rigidBody: {fileID: 5614188266946974100}
+  mass: 3
+  moveSpeed: 20
+  turnSpeed: 150
   sensitivity: 5
-  movementSpeed: 8
-  jumpSpeed: 0
-  gravity: 0
+--- !u!114 &7175427294796338576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 871348577238770416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f68685aae6dccb24f98ac115447f2beb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pontos: {fileID: 0}
+  record: {fileID: 0}
 --- !u!1 &1094626284026616762
 GameObject:
   m_ObjectHideFlags: 0
