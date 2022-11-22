@@ -4,6 +4,10 @@
 /QCAR
 /Temp
 /UserSettings
+/AC2
+
+*.meta
+*.rar
 
 !/Assets
 !/Packages

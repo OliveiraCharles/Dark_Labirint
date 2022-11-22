@@ -6,11 +6,11 @@ using UnityEngine;
 public class Spawn : MonoBehaviour
 {
     public List<GameObject> coin;
-    // public List<GameObject> bomb;
+    public List<GameObject> enemy;
     public float timeCoin = 2f;
-    public float timeBomb = 10f;
+    public float timeEnemy = 10f;
     float tCoin;
-    // float tBomb;
+    float tEnemy;
 
     // Start is called before the first frame update
     void Start()
@@ -22,19 +22,18 @@ public class Spawn : MonoBehaviour
     void Update ()
     {
         tCoin += Time.deltaTime;
-        // tBomb += Time.deltaTime;
+        tEnemy += Time.deltaTime;
 
         if (tCoin > timeCoin)
         {
             tCoin = 0;
-            // coin.SetActive(true);  
             coin[Random.Range(0,4)].SetActive(true);             
         }        
-        // if (tBomb > timeBomb)
-        // {
-        //      tBomb = 0;
-        //      bomb[Random.Range(0,4)].SetActive(true);           
-        // }  
+        if (tEnemy > timeEnemy)
+        {
+             tEnemy = 0;
+             enemy[Random.Range(0,4)].SetActive(true);           
+        }  
        
     }
 }

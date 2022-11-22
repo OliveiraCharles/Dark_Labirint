@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Summon : MonoBehaviour
 {
-    // private Transform transform;
-
     Vector3 pos;
 
     Quaternion rot;
