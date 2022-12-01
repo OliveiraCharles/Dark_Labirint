@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Summon : MonoBehaviour
 {
+	public ScoreManager score;
+
     Vector3 pos;
 
     Quaternion rot;
@@ -19,8 +21,16 @@ public class Summon : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Enemy colide com: "+collision.gameObject);
+
         gameObject.SetActive(false);
         transform.position = pos;
         transform.rotation = rot;
+        
+        if(collision.gameObject.name == "Player"){
+            score.GameOver();
+            collision.gameObject.transform.position = pos;
+            collision.gameObject.transform.rotation = rot;
+        }
     }
 }

@@ -19,7 +19,7 @@ public class Move : MonoBehaviour
 	// private Transform transform;
 	Vector3 pos;
 	Quaternion rot;
-	int heart = 2;
+	// int heart = 2;
 	public ScoreManager score;
     public List<GameObject> Life;
     // Variável que controla a força do pulo do objeto controlado
@@ -85,6 +85,7 @@ public class Move : MonoBehaviour
     //Detect collisions between the GameObjects with Colliders attached
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Player colidiu com: " + collision.gameObject.name);
     //Verifica se o personagem tocou no chão
         isGround = true;
         if (collision.gameObject.name == "GameOver")
@@ -93,22 +94,22 @@ public class Move : MonoBehaviour
             transform.rotation = rot;
             score.GameOver();
         }
-        if (collision.gameObject.name == "Bomb")
-        {
-            Life[heart].gameObject.SetActive(false);
-            heart--;
-        }
-        if (heart < 0)
-        {
-            transform.position = pos;
-            transform.rotation = rot;
-            for (int i = 0; i < 3; i++)
-            {
-                Life[i].gameObject.SetActive(true);
-            }
-            heart = 2;
-            score.GameOver();
-        }
+        // if (collision.gameObject.name == "enemy")
+        // {
+        // //     Life[heart].gameObject.SetActive(false);
+        // //     heart--;
+        // // }
+        // // if (heart < 0)
+        // // {
+        //     transform.position = pos;
+        //     transform.rotation = rot;
+        // //     for (int i = 0; i < 3; i++)
+        // //     {
+        // //         Life[i].gameObject.SetActive(true);
+        // //     }
+        // //     heart = 2;
+        //     score.GameOver();
+        // }
     }
 
     //Verifica se o personagem saiu do chão
